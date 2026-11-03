@@ -148,35 +148,165 @@ h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nav a{transition:none}}
 @media print{body{background:#fff}.site-header{position:static}.section{padding-top:32px}.hero{padding:30px 0}.feature,.project,.public-item,.role{break-inside:avoid}}
+
+/* V4: intuitive navigation, purposeful detail, restrained visual system */
+:root{--bg:#fafaf8;--ink:#1c2422;--muted:#52615d;--subtle:#5b6a65;--line:#dfe3df;--accent:#28675d;--accent-soft:#f0f4f0}
+body{font-size:14px;line-height:1.57}
+.site-header{background:rgba(250,250,248,.97)}
+.container{width:min(calc(100% - 64px),1080px)}
+.header-inner{min-height:62px}
+.nav a{font-size:12px}
+.hero{grid-template-columns:minmax(0,1.55fr) minmax(245px,.65fr);gap:64px;padding:74px 0 51px;align-items:center}
+h1{font-size:clamp(34px,4.4vw,57px);line-height:1.12;letter-spacing:-.055em;margin-bottom:17px}
+.hero-desc{font-size:15px;max-width:600px;line-height:1.7}
+.hero-aside{display:block;border-left:1px solid var(--line);padding-left:27px}
+.hero-aside>.meta-label{margin-bottom:13px}
+.hero-fact{padding:10px 0;border-bottom:1px solid var(--line)}
+.hero-fact:last-child{border-bottom:0}
+.hero-fact strong{font-size:13px;margin-bottom:4px}
+.hero-fact p{font-size:12px}
+.hero-links{margin-top:20px;gap:21px}
+.overview{display:grid;grid-template-columns:148px minmax(0,1fr);gap:22px;border-top:1px solid var(--ink);padding-top:21px}
+.overview-heading .section-index{margin-bottom:12px;display:block}
+.overview-heading h2{font-size:18px;letter-spacing:-.03em;line-height:1.25;margin:0 0 6px}
+.overview-heading>p:last-child{font-size:11px;line-height:1.5;color:var(--muted)}
+.overview-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.overview-link{padding:16px 16px 15px;border:1px solid var(--line);background:var(--surface);text-decoration:none;min-height:105px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:1fr auto;align-items:start;gap:8px;transition:background .18s,border-color .18s,transform .18s}
+.overview-link:hover,.overview-link:focus-visible{background:var(--accent-soft);border-color:#8ea79a;transform:translateY(-2px)}
+.overview-link strong{font-size:13px;font-weight:740;display:block;line-height:1.4}
+.overview-link small{font-size:11px;color:var(--muted);display:block;line-height:1.5;margin-top:5px}
+.overview-count{font:700 10px/1.2 ui-monospace,"SFMono-Regular",Consolas,monospace;color:var(--accent)}
+.overview-link>span:nth-child(2){grid-column:1/-1}
+.overview-action{font-size:10px;font-weight:700;color:var(--accent);grid-row:1;grid-column:2}
+.section{padding-top:66px}
+.section-top{grid-template-columns:125px 1fr;margin-bottom:20px}
+.section-top h2{font-size:clamp(24px,2.7vw,31px)}
+.section-top .intro{font-size:13px;margin-top:6px}
+.feature{gap:45px}
+.feature h3{font-size:23px;line-height:1.26}
+.feature .summary{font-size:14px}
+.frv-metrics{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;padding-top:15px;border-top:1px solid var(--line)}
+.frv-metrics>div{display:flex;align-items:baseline;gap:9px}
+.frv-metrics strong{font-size:20px;font-weight:740;letter-spacing:-.045em}
+.frv-metrics span{font-size:11px;color:var(--muted)}
+.case-details{display:grid;gap:14px}
+.case-line{border-bottom:1px solid var(--line);padding-bottom:12px}
+.case-line b{font-size:12px;display:block;margin-bottom:5px}
+.case-line p{font-size:12px;color:var(--muted);line-height:1.65}
+.read-more{margin-top:3px;border-bottom:1px solid var(--line)}
+.read-more summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;cursor:pointer;padding:10px 0 13px;font-size:12px;font-weight:720;color:var(--accent)}
+.read-more summary::-webkit-details-marker{display:none}
+.read-more summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.toggle-mark{height:18px;width:18px;display:block;flex:0 0 18px;border:1px solid #8aa69c;border-radius:50%;position:relative}
+.toggle-mark:before,.toggle-mark:after{content:"";position:absolute;background:var(--accent);top:8px;left:4px;width:8px;height:1px}
+.toggle-mark:after{transform:rotate(90deg);transition:transform .18s}
+details[open] .toggle-mark:after{transform:rotate(0deg)}
+.more-body{padding:0 0 15px}
+.more-body p{font-size:12px;color:var(--muted);line-height:1.75;margin-bottom:8px}
+.more-body p:last-child{margin-bottom:0}
+.more-body .quiet{font-size:11px;color:var(--subtle)}
+.project{padding:25px 0 22px;gap:43px}
+.project h3{font-size:21px;margin:7px 0 8px}
+.project .summary{font-size:13px}
+.project-status{margin-top:14px}
+.project-note{font-size:12px;line-height:1.65;color:var(--muted);margin:16px 0 4px}
+.system-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-items:center}
+.system-map span{background:#eff3ef;border:1px solid #d7e1d9;padding:10px 7px;min-height:43px;display:flex;align-items:center;justify-content:center;text-align:center;color:#30584e;font-size:10px;line-height:1.35;font-weight:740;position:relative}
+.system-map span+span:before{content:"";position:absolute;left:-7px;top:calc(50% - 1px);width:7px;height:2px;background:#9cb9a7}
+.compact-row{padding:13px 0}
+.compact-row h3{font-size:14px}
+.compact-row p{font-size:12px}
+.public-item{padding:15px 0}
+.public-item h3{font-size:15px}
+.role{padding:13px 0}
+.contact{margin-top:65px}
+.contact h2{font-size:30px}
+@media(max-width:950px){.overview{grid-template-columns:100px 1fr}.feature{gap:25px}}
+@media(max-width:730px){
+.container{width:calc(100% - 36px)}
+.nav a:nth-child(3),.nav a:nth-child(4){display:none}
+.hero{padding:48px 0 32px;gap:22px;grid-template-columns:1fr}
+h1{font-size:clamp(36px,7vw,48px)}
+.hero-aside{display:grid;grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid var(--line);padding:14px 0 0;gap:14px}
+.hero-aside>.meta-label{grid-column:1/-1;margin-bottom:0}
+.hero-fact{border:0;padding:0}
+.hero-fact strong{font-size:12px}.hero-fact p{font-size:11px}
+.overview{display:block;padding-top:19px}
+.overview-heading{margin-bottom:14px}
+.overview-heading h2{font-size:17px}.overview-heading>p:last-child{display:none}
+.overview-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.overview-link{padding:11px;min-height:110px}
+.overview-link strong{font-size:11px}.overview-link small{font-size:10px}
+.section{padding-top:55px}
+.feature,.project{gap:20px}
+}
+@media(max-width:480px){
+.nav a:not(:last-child){display:none}
+.hero-aside{grid-template-columns:1fr 1fr;gap:10px 16px}
+.hero-fact:last-child{grid-column:1/-1}
+.overview-links{display:block}
+.overview-link{min-height:0;display:grid;grid-template-columns:25px 1fr auto;grid-template-rows:1fr;gap:9px;margin-bottom:6px;padding:12px;align-items:center}
+.overview-count{grid-column:1;grid-row:1}
+.overview-link>span:nth-child(2){grid-column:2;grid-row:1}
+.overview-action{grid-column:3;grid-row:1}
+.overview-link small{margin-top:1px}
+.frv-metrics{gap:14px}.frv-metrics span{font-size:10px}
+.system-map span{font-size:9px;padding:7px 5px}
+}
+@media(prefers-reduced-motion:reduce){.overview-link{transition:none}.toggle-mark:after{transition:none}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="#top">Isaac Santín<span>.</span></a><nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#projects">Projects</a><a href="#code">Code</a><a href="mailto:isaac.santintorre@gmail.com">Contact</a></nav></div></header>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="#top">Isaac Santín<span>.</span></a><nav class="nav" aria-label="Main navigation"><a href="#overview">Overview</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#code">Open source</a><a href="mailto:isaac.santintorre@gmail.com">Contact</a></nav></div></header>
 <main id="main">
-<section id="top" class="hero container">
- <div><p class="eyebrow">Data &amp; AI Engineer · Madrid, Spain</p><h1>I turn complex problems into <em>working systems.</em></h1>
- <p class="hero-desc">I build production data platforms, AI-powered tools and complete software products—from an ambiguous business need to a reliable solution people can use.</p>
- <div class="hero-links"><a href="#work">See selected work</a><a href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
- <aside class="hero-aside" aria-label="Professional background"><div><p class="meta-label">Perspective</p><strong>Engineering + business</strong><p>I combine hands-on implementation with an Economics background and product ownership.</p></div><div><p class="meta-label">Experience</p><strong>4 years overall</strong><p>Approximately 2 years focused on data and AI.</p></div></aside>
+<section id="top" class="hero container" aria-labelledby="hero-title">
+ <div><p class="eyebrow">Data &amp; AI Engineer · Madrid, Spain</p><h1 id="hero-title">Engineering data.<br><em>Building with AI.</em></h1><p class="hero-desc">I turn complex operational problems into software people actually use—data platforms, AI systems and digital products built end to end.</p>
+ <div class="hero-links"><a href="#overview">Explore my work <span aria-hidden="true">↓</span></a><a href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
+ <aside class="hero-aside" aria-label="Professional background"><p class="meta-label">At a glance</p><div class="hero-fact"><strong>Data Engineering + AI</strong><p>From source systems to reliable decisions and usable products.</p></div><div class="hero-fact"><strong>Product ownership</strong><p>Architecture, code, workflows and the details in between.</p></div><div class="hero-fact"><strong>4 years overall experience</strong><p>Approximately 2 years focused on data and AI. Economics background.</p></div></aside>
 </section>
-<div class="container metrics" aria-label="Verified scope of prior work"><div class="metric"><strong>3 GW</strong><p>Renewable portfolio supported at FRV</p></div><div class="metric"><strong>30+</strong><p>Power BI pages with contextual AI</p></div><div class="metric"><strong>100+</strong><p>Business KPIs in Ifeel reporting</p></div></div>
+<section class="container overview" id="overview" aria-labelledby="overview-title">
+ <div class="overview-heading"><p class="section-index">Start here</p><h2 id="overview-title">What I work on</h2><p>A quick route through my work, from production to personal projects.</p></div>
+ <div class="overview-links" role="list">
+ <a href="#work" class="overview-link" role="listitem"><span class="overview-count">01</span><span><strong>Production engineering</strong><small>Real-world systems · FRV &amp; Ifeel</small></span><span class="overview-action" aria-hidden="true">View</span></a>
+ <a href="#projects" class="overview-link" role="listitem"><span class="overview-count">02</span><span><strong>Products &amp; AI agents</strong><small>Building Ataraxia &amp; Faro from scratch</small></span><span class="overview-action" aria-hidden="true">View</span></a>
+ <a href="#code" class="overview-link" role="listitem"><span class="overview-count">03</span><span><strong>Public code</strong><small>Explore projects and implementation</small></span><span class="overview-action" aria-hidden="true">View</span></a>
+ </div>
+</section>
 <section id="work" class="section container" aria-labelledby="work-title">
- <div class="section-top"><span class="section-index">01 / Work</span><div><h2 id="work-title">Engineering with business impact.</h2><p class="intro">Production systems and applied AI, built for real operational needs.</p></div></div>
- <article class="feature"><div><p class="meta-label">FRV · Data Engineer · Private employer code</p><h3>Turning renewable-energy data into decisions.</h3><p class="date">September 2025 – July 2026</p><p class="summary">As the team's sole Data Engineer, I owned data products used by Operations, Asset Management and C-level stakeholders, supporting a portfolio of 3 GW of renewable assets.</p></div>
- <div class="detail-group"><div class="detail"><b>Data engineering</b><p>Production pipelines across two databases, using Python, SQL, PySpark and Azure Databricks, with data-quality checks, backfills and monitoring.</p></div><div class="detail"><b>Applied AI</b><p>Independently built Smart Insights: natural-language analysis and contextual executive summaries across 30+ Power BI pages, grounded in data and business rules.</p></div><div class="detail"><b>Reporting and impact</b><p>Plant-level economic-impact models and executive reporting. Initiated automation targeting 1,000+ hours of manual reporting saved annually.</p><span class="note">The savings were projected, not achieved.</span></div></div></article>
+ <div class="section-top"><span class="section-index">01 / Work</span><div><h2 id="work-title">Selected experience</h2><p class="intro">Systems built for real operational needs, with clear business impact.</p></div></div>
+ <article class="feature">
+ <div><p class="meta-label">FRV · Data Engineer · Sep 2025–Jul 2026</p><h3>Building the operational data layer for renewable energy.</h3><p class="summary">Sole Data Engineer for a renewable-energy portfolio, owning data ingestion, analytics and AI-enabled insights used by Operations, Asset Management and C-level stakeholders.</p>
+ <div class="frv-metrics" aria-label="Scale of FRV work"><div><strong>3 GW</strong><span>portfolio supported</span></div><div><strong>30+</strong><span>Power BI pages with AI insights</span></div></div>
+ </div><div class="case-details">
+ <div class="case-line"><b>Data platform</b><p>Production pipelines across two databases using Python, SQL, PySpark and Azure Databricks, with quality checks and monitoring.</p></div>
+ <div class="case-line"><b>Applied AI</b><p>Built Smart Insights for natural-language analysis and contextual summaries grounded in operational data and business rules.</p></div>
+ <details class="read-more"><summary>Implementation &amp; business impact <span class="toggle-mark" aria-hidden="true"></span></summary><div class="more-body"><p>Developed plant-level economic-impact models and executive reporting. Initiated reporting automation with a projected saving of more than 1,000 hours annually.</p><p class="quiet">Projected, not realised; this initiative was not completed.</p></div></details>
+ </div>
+ </article>
  <article class="inline-work"><div><h3>Ifeel · Data Scientist / BI</h3><small>February – August 2025</small></div><p>Automated weekly ETL and reporting across 100+ KPIs from APIs, CSV and Snowflake. Built dashboards, AI-assisted reporting and a 30-day churn prediction model.</p></article>
 </section>
 <section id="projects" class="section container" aria-labelledby="projects-title">
- <div class="section-top"><span class="section-index">02 / Projects</span><div><h2 id="projects-title">Products I build end to end.</h2><p class="intro">Independent work where I own the architecture, implementation and product decisions.</p></div></div>
- <div class="project-list"><article class="project"><div><span class="meta-label">Independent product · Private code</span><h3>Ataraxia Humana</h3><p class="summary">Building the technology behind a psychology platform from the ground up. I own the website, product experience, backend, data model and technical architecture—not just one feature.</p></div><div class="detail-group"><div class="detail"><b>End-to-end ownership</b><p>Engineering the client, practitioner and admin workflows, matching, scheduling, payment integration, security and infrastructure plans.</p></div><div class="detail"><b>Applied AI</b><p>Developing specialised assistants for research and operational preparation, including legal/compliance workflows with human review.</p></div><div class="detail"><b>Status</b><p>Working local MVP and pilot environment; no live users or real-money launch.</p></div></div></article>
-<article class="project"><div><span class="meta-label">Personal AI system · Private code</span><h3>Faro</h3><p class="summary">A personalised AI agent designed around my own needs, accessed through an intentionally simple feature phone. The phone is just the interface; the intelligence lives on my server.</p></div><div class="detail-group"><div class="detail"><b>System built</b><p>KaiOS app, voice interaction, authenticated gateway and a Mac-hosted AI agent, designed for a physical keypad and constrained hardware.</p></div><div class="detail"><b>Personalisation</b><p>Developing contextual memory and tools to support everyday workflows, with owner-controlled permissions.</p></div><div class="detail"><b>Status</b><p>Voice questions and answers tested on the physical device; advanced actions and memory still in development.</p></div></div></article></div>
+ <div class="section-top"><span class="section-index">02 / Projects</span><div><h2 id="projects-title">Independent projects</h2><p class="intro">From architecture to implementation. Select a project to see how it works.</p></div></div>
+ <div class="project-list">
+ <article class="project project-feature" id="ataraxia"><div class="project-overview"><p class="meta-label">01 / Full-stack platform · Local MVP</p><h3>Ataraxia Humana</h3><p class="summary">Building the entire technology foundation of a psychology platform: the website, user experience, backend, operations and infrastructure.</p><span class="project-status">Independent project · Private code</span></div>
+ <div class="project-deep"><div class="system-map" aria-label="Ataraxia system components"><span>Web &amp; users</span><span>Platform &amp; data</span><span>AI workflows</span></div>
+ <p class="project-note">I own the engineering end to end, including client and practitioner workflows, matching, scheduling, payments integration and security.</p>
+ <details class="read-more"><summary>Explore architecture &amp; AI <span class="toggle-mark" aria-hidden="true"></span></summary><div class="more-body"><p>Developing specialised AI-assisted research, documentation and operational workflows, including legal and administrative preparation with human professional review.</p><p class="quiet">Currently a working local MVP/pilot environment. No live users or real-money launch.</p></div></details>
+ </div></article>
+ <article class="project project-feature" id="faro"><div class="project-overview"><p class="meta-label">02 / Personal AI agent · Physical prototype</p><h3>Faro</h3><p class="summary">Developing a personal AI agent tailored to my everyday needs, accessed through a simple voice-first feature phone.</p><span class="project-status">Independent project · Private code</span></div>
+ <div class="project-deep"><div class="system-map" aria-label="Faro system architecture"><span>KaiOS phone</span><span>Secure gateway</span><span>Personal agent</span></div>
+ <p class="project-note">I built the KaiOS interface, voice interaction, secure connection and Mac-hosted agent integration. Now extending contextual memory and personal tools.</p>
+ <details class="read-more"><summary>Explore the agent &amp; validation <span class="toggle-mark" aria-hidden="true"></span></summary><div class="more-body"><p>The goal is a distraction-free personal assistant: the phone is the interface, while the AI system handles interpretation and future owner-approved actions.</p><p class="quiet">Voice Q&amp;A has been tested on the physical Alcatel 3088X. Advanced memory and actions are still in development and validation.</p></div></details>
+ </div></article>
+ </div>
  <div class="compact-list"><article class="compact-row"><h3>Independent decision systems</h3><p>Private AI-assisted software for turning inconsistent information into structured analysis and reliable decisions, with human approval where it matters.</p></article>
 <article class="compact-row"><h3>Reporting &amp; compliance workflows</h3><p>Traceable reconciliations and repeatable administrative calculations using structured records and checks.</p></article>
 <article class="compact-row"><h3>jewelrei</h3><p>Founded and operated an online personalised-jewellery business, handling sourcing, pricing, marketing and customer operations (2020–2022).</p></article></div>
 </section>
 <section id="code" class="section container" aria-labelledby="code-title">
- <div class="section-top"><span class="section-index">03 / Code</span><div><h2 id="code-title">Public work, open for review.</h2><p class="intro">Selected public repositories. Code for private and employer projects is not published.</p></div></div>
+ <div class="section-top"><span class="section-index">03 / Code</span><div><h2 id="code-title">Open source &amp; experiments</h2><p class="intro">A selection of public repositories; employer and private code remains private.</p></div></div>
  <div class="public-grid"><article class="public-item"><h3><a href="https://github.com/isaacstg/repo-preflight" target="_blank" rel="noopener noreferrer">Repo Preflight</a></h3><p>CLI and GitHub Action for checking potential secrets, unsafe workflow settings and repository hygiene.</p></article>
 <article class="public-item"><h3><a href="https://github.com/isaacstg/pairbar-codex" target="_blank" rel="noopener noreferrer">Pairbar</a></h3><p>Native macOS menu-bar application for locally managed ChatGPT/Codex profiles; in development.</p></article>
 <article class="public-item"><h3><a href="https://github.com/isaacstg/decision-capsules" target="_blank" rel="noopener noreferrer">Decision Capsules</a></h3><p>Portable, schema-validated records for engineering decisions, evidence and risk review.</p></article>
@@ -185,14 +315,14 @@ h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing
 <article class="public-item"><h3><a href="https://github.com/isaacstg/Goodreads-Scraper" target="_blank" rel="noopener noreferrer">Goodreads Scraper</a></h3><p>Book trends and review sentiment explored through scraping and an interactive dashboard.</p></article></div>
 </section>
 <section id="experience" class="section container" aria-labelledby="experience-title">
- <div class="section-top"><span class="section-index">04 / Background</span><div><h2 id="experience-title">Experience.</h2></div></div><div class="experience"><div class="role"><time>2026–present</time><strong>Independent · Engineering &amp; automation</strong><p>Building internal AI-assisted workflows for analysis, administrative processes and decision support.</p></div>
+ <div class="section-top"><span class="section-index">04 / Background</span><div><h2 id="experience-title">Career snapshot</h2></div></div><div class="experience"><div class="role"><time>2026–present</time><strong>Independent · Engineering &amp; automation</strong><p>Building internal AI-assisted workflows for analysis, administrative processes and decision support.</p></div>
 <div class="role"><time>2025–2026</time><strong>FRV · Data Engineer</strong><p>Owned operational data products, pipelines and contextual AI analysis for Operations, Asset Management and C-level.</p></div>
 <div class="role"><time>2025</time><strong>Ifeel · Data Scientist / BI</strong><p>ETL automation, 100+ KPI reporting, dashboards and a 30-day churn prediction model.</p></div>
 <div class="role"><time>2023</time><strong>El Corte Inglés · Purchasing intern</strong><p>Sales analysis and seasonal buying support.</p></div>
 <div class="role"><time>2020–2022</time><strong>jewelrei · Founder</strong><p>End-to-end e-commerce operations, sourcing, pricing and marketing.</p></div></div>
 </section>
 <section id="about" class="section container" aria-labelledby="about-title">
- <div class="section-top"><span class="section-index">05 / About</span><div><h2 id="about-title">Skills &amp; education.</h2></div></div>
+ <div class="section-top"><span class="section-index">05 / About</span><div><h2 id="about-title">Skills &amp; education</h2></div></div>
  <div class="profile-grid"><div><h3>Technical toolkit</h3>
   <div class="skill-line"><b>Data</b><p>Python, SQL, PySpark, Databricks, Delta Lake, Azure, Snowflake, ETL/ELT</p></div>
   <div class="skill-line"><b>Analytics</b><p>Power BI, DAX, KPI design, data modelling, predictive models</p></div>

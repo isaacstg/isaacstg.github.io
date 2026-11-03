@@ -3,199 +3,205 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f2f1ec">
 <meta name="color-scheme" content="light">
-<meta name="description" content="Isaac Santín Torrecilla is a Madrid-based Data & AI Engineer. Production data platforms, AI agents and full-stack products, designed and built end to end.">
+<meta name="theme-color" content="#f8f8f5">
+<meta name="description" content="Isaac Santín Torrecilla, Data & AI Engineer based in Madrid. Production data platforms, applied AI agents and end-to-end product engineering.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Isaac Santín Torrecilla">
 <meta property="og:title" content="Isaac Santín Torrecilla — Data & AI Engineer">
-<meta property="og:description" content="Complex problems, clear systems. Explore my engineering work, applied AI projects and public code.">
+<meta property="og:description" content="I turn complex problems into working systems. Selected data engineering, AI and independent products.">
 <meta property="og:url" content="https://isaacstg.github.io/">
+<meta property="og:locale" content="en_GB">
 <link rel="canonical" href="https://isaacstg.github.io/">
-<title>Isaac Santín — Data &amp; AI Engineer · Portfolio</title>
+<title>Isaac Santín — Data &amp; AI Engineer</title>
 <style>
-:root{--paper:#f2f1ec;--white:#faf9f6;--ink:#152020;--muted:#5a6967;--line:#c9cfcb;--blue:#3151e8;--orange:#e36546;--dark:#142323;--lime:#d6f5b1;--max:1256px}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;color:var(--ink);background:var(--paper);font:400 16px/1.58 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#f8f8f5;
+  --surface:#ffffff;
+  --ink:#182322;
+  --muted:#566460;
+  --subtle:#586963;
+  --line:#d8ddda;
+  --accent:#205c58;
+  --accent-soft:#e9f0ec;
+  --measure:1110px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.58;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:4px}
-a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-button{font:inherit}
-::selection{background:#d6f5b1;color:var(--ink)}
-.wrap{width:min(var(--max),calc(100% - 90px));margin:auto}
-.skip{position:absolute;top:-99px;left:16px;padding:9px 15px;z-index:70;background:#fff}.skip:focus{top:13px}
-.top{position:relative;border-bottom:1px solid var(--ink)}
-.topbar{height:85px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
-.identity{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:-.03em}
-.symbol{width:38px;height:38px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;font-size:13px;line-height:1}
-.site-caption{color:var(--muted);font:600 11px/1.5 "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.11em}
-nav{display:flex;justify-self:end;align-items:center;gap:27px}nav a{font:700 12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:.01em;text-decoration:none;transition:color .2s}nav a:hover{color:var(--blue)}
-.nav-contact{display:inline-flex;align-items:center;gap:8px;color:#fff;background:var(--ink);padding:12px 16px;border-radius:2px}.nav-contact:hover{color:#fff;background:var(--blue)}
-.hero{position:relative;padding:87px 0 44px;display:grid;grid-template-columns:minmax(0,1.72fr) minmax(275px,.75fr);gap:44px;align-items:end}
-.overline{margin:0 0 25px;display:flex;align-items:center;gap:13px;color:var(--blue);font:700 12px/1.4 "SFMono-Regular",Consolas,monospace;letter-spacing:.075em;text-transform:uppercase}
-.overline:before{content:"";width:30px;height:2px;background:currentColor}
-h1,h2,h3,h4,p{margin-top:0}
-h1{font-size:clamp(64px,7.65vw,118px);line-height:.93;letter-spacing:-.093em;font-weight:800;margin:0 0 39px}
-h1 em{color:var(--blue);font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.076em;font-style:italic}
-.hero-text{font-size:clamp(17px,1.5vw,20px);line-height:1.65;max-width:650px;color:#354440;margin-bottom:29px}
-.hero-cta{display:flex;align-items:center;flex-wrap:wrap;gap:20px}.link-cta{display:inline-flex;gap:25px;align-items:center;padding:11px 0;text-decoration:none;border-bottom:2px solid var(--ink);font-size:14px;font-weight:800;transition:gap .2s,color .2s}
-.link-cta:hover{gap:34px;color:var(--blue)}.link-secondary{font-size:13px;font-weight:690;color:var(--muted);text-decoration:none}.link-secondary:hover{color:var(--blue)}
-.hero-note{font:600 11px/1.8 "SFMono-Regular",Consolas,monospace;letter-spacing:.03em;color:var(--muted);margin:33px 0 0}
-.diagram{height:510px;position:relative;overflow:hidden;background:var(--blue);color:#fff;padding:23px 26px;isolation:isolate}
-.diagram:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff18 1px,transparent 1px),linear-gradient(90deg,#ffffff18 1px,transparent 1px);background-size:31px 31px}
-.diagram:after{content:"";position:absolute;border:2px solid #ffffff46;border-radius:50%;width:400px;height:400px;top:102px;right:-160px;box-shadow:0 0 0 32px #ffffff0c,0 0 0 70px #ffffff08}
-.diagram>*{position:relative;z-index:1}
-.diagram-top{display:flex;justify-content:space-between;align-items:flex-start;font:700 11px/1.4 "SFMono-Regular",Consolas,monospace;letter-spacing:.1em}
-.diagram-glyph{position:absolute;top:80px;right:14px;font-size:clamp(150px,16vw,240px);font-weight:900;letter-spacing:-.19em;line-height:1;transform:rotate(-14deg);opacity:.92}
-.diagram-flow{position:absolute;bottom:23px;left:26px;right:26px}
-.diagram-flow p{font:700 10px/1.5 "SFMono-Regular",Consolas,monospace;letter-spacing:.13em;margin-bottom:11px;color:#e1e8ff}
-.diagram-step{padding:14px 0;border-top:1px solid #ffffff77;display:grid;grid-template-columns:30px 1fr auto;gap:10px;font-size:15px;font-weight:700;align-items:center}
-.diagram-step span{font:600 11px/1 "SFMono-Regular",Consolas,monospace;color:#d0d9ff}
-.stat-strip{margin-top:36px;background:var(--dark);color:#f7f8f4;display:grid;grid-template-columns:1.12fr repeat(3,1fr);min-height:146px}
-.stat-label{padding:27px 28px;display:flex;align-items:end;font-size:15px;font-weight:800;line-height:1.35;letter-spacing:-.025em}
-.stat{padding:25px 28px;border-left:1px solid #56605e}
-.stat strong{font-size:clamp(30px,3.8vw,53px);line-height:1;letter-spacing:-.08em;display:block;font-weight:830;color:var(--lime)}
-.stat span{display:block;font-size:12px;color:#cdd7d0;line-height:1.45;margin-top:9px;max-width:155px}
-.section{padding:105px 0 10px}.section-head{display:grid;grid-template-columns:125px minmax(0,1fr) minmax(185px,.45fr);gap:25px;align-items:end;margin-bottom:39px}
-.index{font:700 12px/1.4 "SFMono-Regular",Consolas,monospace;color:var(--blue);letter-spacing:.08em}
-.section-head h2{font-size:clamp(42px,5.3vw,76px);font-weight:800;letter-spacing:-.078em;line-height:1.04;margin:0}
-.section-head h2 em{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.07em;color:var(--blue)}
-.section-head>p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 6px}
-.feature-case{border-top:2px solid var(--ink);padding-top:30px;display:grid;grid-template-columns:1.02fr .98fr;gap:70px}
-.case-id{font:700 11px/1.5 "SFMono-Regular",Consolas,monospace;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
-.case-left h3{font-size:clamp(36px,3.65vw,54px);line-height:1.08;letter-spacing:-.069em;margin:24px 0 17px}
-.case-left .lede{font-size:18px;line-height:1.62;color:#3f504a;max-width:540px}
-.case-stamp{margin-top:38px;display:flex;align-items:center;gap:15px;border-top:1px solid var(--line);padding-top:17px}
-.case-stamp strong{font-size:46px;letter-spacing:-.075em;line-height:1}
-.case-stamp span{font-size:12px;max-width:150px;line-height:1.5;color:var(--muted)}
-.case-right{padding-top:4px}
-.facts-row{display:grid;grid-template-columns:116px 1fr;gap:23px;padding:19px 0;border-bottom:1px solid var(--line)}
-.facts-row:first-child{padding-top:0}
-.facts-row .label{font:700 11px/1.5 "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
-.facts-row p{font-size:15px;line-height:1.67;color:#34433e;margin:0}.facts-row p strong{color:var(--ink)}
-.fact-note{color:#697871!important;font-size:12px!important;margin-top:8px!important}
-.if-section{margin-top:60px;border:1px solid var(--ink);display:grid;grid-template-columns:195px 1fr auto;gap:30px;align-items:center;padding:27px 30px}
-.if-section h3{font-size:26px;margin:0;letter-spacing:-.045em}.if-section p{color:#485b53;font-size:14px;margin:0}.if-section .aside{color:var(--blue);font:700 10px/1.4 "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.07em;white-space:nowrap}
-.system{border-top:1px solid var(--ink);padding:36px 0 51px;display:grid;grid-template-columns:120px minmax(0,1.1fr) minmax(260px,.85fr);gap:30px}
-.system-no{font:700 12px/1.3 "SFMono-Regular",Consolas,monospace;color:var(--blue)}
-.system-title{font-size:clamp(34px,3.7vw,56px);line-height:1.08;letter-spacing:-.074em;margin:0 0 12px}
-.system-title em{font-family:Georgia,serif;color:var(--blue);font-weight:400}
-.system-sub{font-size:17px;line-height:1.57;max-width:600px;margin:0 0 23px;color:#43534e}
-.system-body{font-size:14px;line-height:1.8;color:#475953;max-width:570px}.system-body strong{color:var(--ink)}
-.system-body p{margin-bottom:13px}
-.system-meta{font:700 11px/1.6 "SFMono-Regular",Consolas,monospace;letter-spacing:.03em;margin-top:21px;color:var(--muted);text-transform:uppercase}
-.system-art{position:relative;min-height:365px;align-self:stretch;overflow:hidden;background:#dddfd6}
-.phone-art{background:#d8dbcF}
-.phone-art .art-label,.platform-art .art-label{position:absolute;top:17px;left:19px;font:700 10px/1.5 "SFMono-Regular",Consolas,monospace;letter-spacing:.1em}
-.phone-shell{position:absolute;left:50%;top:50%;transform:translate(-50%,-47%) rotate(-10deg);width:150px;height:270px;border:8px solid #1b2323;border-radius:25px;background:#1b2323;box-shadow:20px 20px 0 #74857860}
-.phone-screen{background:#e9efe1;height:139px;border:3px solid #5c7062;border-radius:5px;color:#1d2a25;padding:10px;font:700 12px/1.4 "SFMono-Regular",Consolas,monospace}
-.phone-screen .dots{margin-top:17px;letter-spacing:4px;font-size:20px;color:#2a695c}
-.phone-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 8px}.phone-keys span{height:12px;background:#64736c;border-radius:7px}
-.phone-keys span:nth-child(2){background:var(--lime)}
-.phone-hint{position:absolute;bottom:21px;right:20px;font:700 11px/1.5 "SFMono-Regular",Consolas,monospace;text-align:right;color:#435149}
-.platform-art{background:#dedaf1}
-.platform-node{position:absolute;border:2px solid #1e285d;background:#fbfaf4;padding:18px;font:800 12px/1.4 "SFMono-Regular",Consolas,monospace;box-shadow:8px 8px 0 #353fa94a}
-.platform-node.one{top:75px;left:20px;width:49%}.platform-node.two{top:163px;right:22px;width:51%}.platform-node.three{bottom:29px;left:43px;width:61%}
-.platform-node small{display:block;color:#5961a2;font-size:9px;margin-top:13px;letter-spacing:.02em}
-.platform-art:before{content:"";position:absolute;inset:25px;background:repeating-linear-gradient(90deg,transparent 0 24px,#656bad1d 25px 26px)}
-.subwork{border-top:1px solid var(--ink);padding:23px 0;display:grid;grid-template-columns:120px minmax(185px,.75fr) minmax(0,1.3fr) 195px;gap:26px;align-items:start}
-.subwork .index{color:#7a8781}
-.subwork h3{font-size:23px;line-height:1.25;letter-spacing:-.045em;margin:0}.subwork p{margin:0;color:#4d6059;font-size:14px;line-height:1.7}.subwork .stage{font:700 10px/1.6 "SFMono-Regular",Consolas,monospace;letter-spacing:.05em;color:#60716a;text-align:right;text-transform:uppercase}
-.code-row{border-top:1px solid var(--ink);display:grid;grid-template-columns:65px minmax(160px,.9fr) minmax(0,1.2fr) 25px;gap:25px;align-items:center;padding:22px 3px;text-decoration:none;transition:padding .2s,background .2s}
-.code-row:last-child{border-bottom:1px solid var(--ink)}
-.code-row:hover{padding-left:16px;background:#e6e6df;color:var(--ink)}
-.code-row .n{font:700 12px/1.4 "SFMono-Regular",Consolas,monospace;color:var(--blue)}
-.code-row h3{font-size:20px;letter-spacing:-.04em;margin:0}.code-row p{font-size:13px;line-height:1.58;color:#53665e;margin:0}
-.code-row .arrow{text-align:right;color:var(--blue);font-size:22px}
-.cv-grid{border-top:1px solid var(--ink)}
-.cv-row{border-bottom:1px solid var(--line);padding:20px 0;display:grid;grid-template-columns:125px 220px 1fr;gap:23px;align-items:start}
-.cv-row time{font:600 11px/1.5 "SFMono-Regular",Consolas,monospace;color:#62736e}
-.cv-row h3{font-size:17px;letter-spacing:-.035em;line-height:1.35;margin:0}
-.cv-row p{color:#50635a;font-size:13px;line-height:1.7;margin:0}
-.bio-grid{border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:55px;padding-top:27px}
-.bio-grid h3{font-size:17px;letter-spacing:-.04em;margin:0 0 18px}
-.bio-item{border-top:1px solid var(--line);padding:14px 0}
-.bio-item strong{display:block;font-size:14px}.bio-item span{font-size:13px;color:#5a6c63}
-.skill-row{border-top:1px solid var(--line);padding:13px 0;display:grid;grid-template-columns:100px 1fr;gap:13px}
-.skill-row:last-child{border-bottom:1px solid var(--line)}
-.skill-row strong{font:700 10px/1.55 "SFMono-Regular",Consolas,monospace;color:var(--blue);text-transform:uppercase}
-.skill-row span{font-size:13px;line-height:1.7;color:#4d6158}
-.closing{margin-top:120px;background:var(--blue);color:#fff;padding:58px 50px 47px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 200px;gap:30px}
-.closing:after{content:"↗";position:absolute;bottom:-102px;right:33px;font:800 320px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#ffffff18;pointer-events:none}
-.closing p{font:700 12px/1.4 "SFMono-Regular",Consolas,monospace;letter-spacing:.08em;color:#e6ebff;text-transform:uppercase}
-.closing h2{font-size:clamp(43px,5.2vw,76px);max-width:720px;line-height:1.04;letter-spacing:-.082em;margin:23px 0}
-.closing h2 em{font-family:Georgia,serif;font-weight:400}
-.closing a{display:inline-flex;align-items:center;gap:23px;padding-bottom:8px;border-bottom:2px solid #fff;color:#fff;font-weight:800;text-decoration:none;font-size:16px;position:relative;z-index:1}
-.closing small{align-self:start;justify-self:end;font:700 11px/1.6 "SFMono-Regular",Consolas,monospace;text-align:right}
-footer{padding:31px 0 44px;display:flex;justify-content:space-between;gap:20px;font:700 11px/1.6 "SFMono-Regular",Consolas,monospace;color:#5d7067}
-footer a{margin-left:20px;text-decoration:none}footer a:hover{color:var(--blue)}
-@media(max-width:1100px){.wrap{width:min(var(--max),calc(100% - 58px))}.hero{gap:24px}.system{grid-template-columns:80px minmax(0,1.1fr) minmax(235px,.82fr)}.section-head{grid-template-columns:85px 1fr 230px}.subwork{grid-template-columns:80px minmax(0,.8fr) minmax(0,1.4fr)}.subwork .stage{grid-column:2/-1;text-align:left}.if-section{grid-template-columns:155px 1fr}.if-section .aside{display:none}}
-@media(max-width:750px){.wrap{width:calc(100% - 36px)}.topbar{height:69px;grid-template-columns:1fr auto}.site-caption{display:none}nav a:not(.nav-contact){display:none}.hero{padding:48px 0 22px;grid-template-columns:1fr}.overline{margin-bottom:19px}h1{font-size:clamp(59px,12vw,95px)}.diagram{height:350px}.diagram-glyph{top:22px;right:60px;font-size:170px}.diagram-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;bottom:15px}.diagram-flow p{grid-column:1/-1;margin:0}.diagram-step{display:block;padding:8px 0;font-size:12px}.diagram-step span{display:block;margin-bottom:5px}.diagram-step b{display:none}.stat-strip{grid-template-columns:repeat(3,1fr)}.stat-label{grid-column:1/-1;padding:19px 18px;font-size:13px}.stat{padding:18px;border-top:1px solid #56605e}.stat:first-of-type{border-left:0}.section{padding:70px 0 7px}.section-head{display:block;margin-bottom:26px}.section-head .index{display:block;margin-bottom:14px}.section-head>p{margin-top:13px;max-width:500px}.feature-case{grid-template-columns:1fr;gap:25px}.case-left h3{font-size:43px}.case-stamp{margin-top:15px}.if-section{display:block;padding:23px}.if-section p{margin-top:10px}.system{grid-template-columns:48px 1fr;gap:12px}.system-art{grid-column:2;min-height:315px}.system-title{font-size:43px}.subwork{grid-template-columns:48px 1fr;gap:12px}.subwork p,.subwork .stage{grid-column:2}.subwork .stage{margin-top:0}.code-row{grid-template-columns:34px 1fr 25px;gap:13px}.code-row p{grid-column:2;grid-row:2}.code-row .arrow{grid-column:3;grid-row:1}.cv-row{grid-template-columns:1fr 1.6fr;gap:10px}.cv-row p{grid-column:2}.bio-grid{grid-template-columns:1fr;gap:30px}.closing{margin-top:76px;grid-template-columns:1fr;padding:34px 27px}.closing small{justify-self:start}.closing h2{font-size:clamp(44px,8vw,70px)}footer{display:block}footer a{margin:0 20px 0 0;display:inline-block}footer div{margin-top:12px}}
-@media(max-width:450px){h1{font-size:clamp(52px,13vw,65px)}.hero-text{font-size:16px}.stat strong{font-size:32px}.stat span{font-size:10px}.stat{padding:15px 11px}.diagram{height:320px}.diagram-glyph{font-size:145px}.feature-case{padding-top:21px}.facts-row{grid-template-columns:85px 1fr;gap:10px}.system{grid-template-columns:1fr;gap:12px}.system-art{grid-column:1}.system-no{font-size:11px}.subwork{grid-template-columns:34px 1fr}.case-left h3,.system-title{font-size:38px}.section-head h2{font-size:42px}.cv-row{display:block}.cv-row h3{margin:7px 0}.closing h2{font-size:40px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}nav a,.link-cta,.code-row{transition:none}}
-@media print{body{background:white}.hero,.section{padding-top:20px}.diagram,.stat-strip,.closing,.system-art{print-color-adjust:exact;-webkit-print-color-adjust:exact}.system,.code-row,.cv-row{break-inside:avoid}}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+p,h1,h2,h3,h4{margin-top:0}
+p{margin-bottom:0}
+.container{width:min(calc(100% - 64px),var(--measure));margin:0 auto}
+.skip{position:absolute;top:-90px;left:12px;padding:10px 15px;background:var(--surface);z-index:10}
+.skip:focus{top:12px}
+.site-header{background:rgba(248,248,245,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:67px}
+.brand{font-size:17px;font-weight:780;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font-size:13px;font-weight:620;text-decoration:none;color:#445551;transition:color .15s}
+.nav a:hover{color:var(--accent)}
+.nav a:last-child{border-bottom:1px solid currentColor;padding-bottom:2px;color:var(--ink)}
+.hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(245px,.55fr);gap:70px;padding:81px 0 62px;align-items:end}
+.eyebrow,.section-index,.meta-label{font-size:11px;font-weight:750;letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+.eyebrow{margin-bottom:20px}
+h1{font-size:clamp(40px,5.15vw,69px);font-weight:750;line-height:1.1;letter-spacing:-.06em;margin:0 0 22px;max-width:700px}
+h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.04em;color:var(--accent);font-style:italic}
+.hero-desc{font-size:17px;line-height:1.65;color:#3e514b;max-width:640px}
+.hero-links{display:flex;flex-wrap:wrap;gap:22px;margin-top:27px;align-items:center}
+.hero-links a{font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.hero-links a:hover{color:var(--accent);border-color:var(--accent)}
+.hero-aside{border-left:1px solid var(--line);padding-left:27px;display:grid;gap:19px}
+.hero-aside p{font-size:13px;color:#4e605a;line-height:1.55}
+.hero-aside strong{display:block;color:var(--ink);font-size:15px;line-height:1.25;margin-bottom:5px;letter-spacing:-.018em}
+.hero-aside .meta-label{font-size:10px;margin-bottom:3px}
+.metrics{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding:20px 0 22px;gap:32px}
+.metric{display:flex;align-items:baseline;gap:14px}
+.metric strong{font-size:31px;font-weight:780;letter-spacing:-.055em;line-height:1.05;white-space:nowrap}
+.metric p{font-size:12px;line-height:1.4;color:var(--muted);max-width:185px}
+.section{padding:79px 0 0}
+.section-top{display:grid;grid-template-columns:125px minmax(0,1fr);gap:22px;margin-bottom:26px;align-items:start}
+.section-index{padding-top:8px}
+.section-top h2{font-size:clamp(26px,3vw,36px);font-weight:760;letter-spacing:-.045em;line-height:1.2;margin:0}
+.section-top .intro{font-size:14px;color:var(--muted);margin-top:10px;max-width:600px}
+.feature{margin-left:147px;border-top:1px solid var(--ink);padding-top:25px;display:grid;grid-template-columns:minmax(0,1fr) minmax(275px,.93fr);gap:48px}
+.feature h3{font-size:26px;font-weight:730;letter-spacing:-.04em;line-height:1.22;margin:9px 0 11px}
+.date{color:var(--subtle);font-size:12px;margin-bottom:11px}
+.summary{font-size:15px;color:#354741;line-height:1.65}
+.detail-group{display:grid;gap:15px}
+.detail{border-bottom:1px solid var(--line);padding-bottom:13px}
+.detail:last-child{border-bottom:0;padding-bottom:0}
+.detail b{display:block;font-size:12px;color:var(--ink);font-weight:750;margin-bottom:4px}
+.detail p{font-size:13px;line-height:1.62;color:var(--muted)}
+.note{font-size:11px;color:var(--subtle);display:block;margin-top:5px}
+.inline-work{margin:34px 0 0 147px;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:180px 1fr;gap:22px}
+.inline-work h3{font-size:16px;letter-spacing:-.025em;margin-bottom:4px}
+.inline-work small{font-size:11px;color:var(--subtle)}
+.inline-work p{font-size:13px;line-height:1.68;color:var(--muted)}
+.project-list{margin-left:147px;border-top:1px solid var(--ink)}
+.project{display:grid;grid-template-columns:minmax(0,1fr) minmax(275px,.93fr);gap:48px;border-bottom:1px solid var(--line);padding:25px 0 26px}
+.project h3{font-size:23px;font-weight:750;letter-spacing:-.04em;line-height:1.25;margin:8px 0 10px}
+.project .summary{font-size:14px}
+.project .detail-group{gap:12px}
+.project .detail{padding-bottom:11px}
+.project .detail b{font-size:12px}
+.project .detail p{font-size:13px}
+.project-status{display:inline-block;margin-top:18px;font-size:11px;color:var(--subtle)}
+.compact-list{margin-left:147px;border-top:1px solid var(--line)}
+.compact-row{display:grid;grid-template-columns:200px 1fr;gap:25px;padding:16px 0;border-bottom:1px solid var(--line)}
+.compact-row h3{font-size:15px;letter-spacing:-.025em;line-height:1.45;margin:0}
+.compact-row p{color:var(--muted);font-size:13px;line-height:1.6}
+.public-grid{margin-left:147px;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:37px}
+.public-item{padding:17px 0 20px;border-bottom:1px solid var(--line);min-width:0}
+.public-item h3{font-size:16px;letter-spacing:-.025em;margin:0 0 6px}
+.public-item a{text-decoration:none;border-bottom:1px solid var(--accent)}
+.public-item a:hover{color:var(--accent)}
+.public-item p{font-size:12px;line-height:1.6;color:var(--muted)}
+.experience{margin-left:147px;border-top:1px solid var(--ink)}
+.role{display:grid;grid-template-columns:145px 225px minmax(0,1fr);gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.role time{font-size:12px;color:var(--subtle)}
+.role strong{font-size:13px;font-weight:740;line-height:1.45}
+.role p{font-size:12px;line-height:1.62;color:var(--muted)}
+.profile-grid{margin-left:147px;display:grid;grid-template-columns:1fr .87fr;gap:50px;border-top:1px solid var(--ink);padding-top:18px}
+.profile-grid h3{font-size:14px;letter-spacing:-.02em;margin-bottom:13px}
+.skill-line{border-bottom:1px solid var(--line);display:grid;grid-template-columns:104px 1fr;gap:17px;padding:10px 0}
+.skill-line:first-of-type{border-top:1px solid var(--line)}
+.skill-line b{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.045em}
+.skill-line p{font-size:12px;color:var(--muted);line-height:1.6}
+.education{padding:12px 0;border-bottom:1px solid var(--line)}
+.education strong{display:block;font-size:13px;font-weight:740;line-height:1.4}
+.education p{font-size:12px;color:var(--muted);line-height:1.6;margin-top:3px}
+.contact{margin-top:89px;padding:39px 0 44px;border-top:1px solid var(--ink);display:flex;justify-content:space-between;gap:25px;align-items:center}
+.contact h2{font-size:clamp(27px,3.5vw,40px);font-weight:750;letter-spacing:-.045em;line-height:1.2;margin:6px 0 8px}
+.contact p{font-size:13px;color:var(--muted)}
+.contact a{font-size:14px;font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:5px;text-decoration:none;white-space:nowrap}
+.contact a:hover{color:var(--accent);border-color:var(--accent)}
+.footer{padding:20px 0 32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--subtle)}
+.footer a{text-decoration:none;margin-left:16px;color:var(--muted)}
+.footer a:hover{color:var(--accent)}
+@media(max-width:950px){
+.hero{gap:36px}.section-top{grid-template-columns:95px 1fr}.feature,.project-list,.compact-list,.public-grid,.experience,.profile-grid,.inline-work{margin-left:117px}.feature,.project{gap:25px}.role{grid-template-columns:115px 160px 1fr;gap:12px}
+}
+@media(max-width:730px){
+.container{width:calc(100% - 36px)}
+.header-inner{min-height:62px}.nav{gap:15px}.nav a:nth-child(2),.nav a:nth-child(3){display:none}
+.hero{grid-template-columns:1fr;padding:57px 0 39px;gap:30px}h1{font-size:clamp(39px,8.4vw,58px)}.hero-desc{font-size:15px}.hero-aside{border-left:0;border-top:1px solid var(--line);padding:19px 0 0;grid-template-columns:1fr 1fr;gap:15px}.hero-aside p{font-size:12px}
+.metrics{gap:15px}.metric{display:block}.metric strong{font-size:27px}.metric p{margin-top:5px;font-size:11px}
+.section{padding-top:58px}.section-top{display:block;margin-bottom:21px}.section-index{display:block;padding-top:0;margin-bottom:12px}.section-top h2{font-size:29px}
+.feature,.project-list,.compact-list,.public-grid,.experience,.profile-grid,.inline-work{margin-left:0}
+.feature,.project{grid-template-columns:1fr;gap:21px}.feature h3{font-size:24px}.project{padding:22px 0}.project h3{font-size:22px}
+.inline-work{grid-template-columns:1fr;gap:9px}.public-grid{gap:0 22px}.role{grid-template-columns:110px 1fr;gap:9px 15px}.role p{grid-column:2}.profile-grid{gap:24px}
+.contact{margin-top:63px}
+}
+@media(max-width:480px){
+.hero{padding-top:46px}h1{font-size:41px}
+.nav a:not(:last-child){display:none}.nav{gap:0}
+.hero-aside{grid-template-columns:1fr 1fr}
+.metrics{grid-template-columns:1fr 1fr;gap:20px}.metric:last-child{grid-column:1/-1}.metric:last-child p{max-width:none}
+.public-grid,.profile-grid{grid-template-columns:1fr}
+.compact-row{grid-template-columns:1fr;gap:4px}
+.role{grid-template-columns:90px 1fr;gap:8px 12px}
+.contact{display:block}.contact a{display:inline-block;margin-top:19px;white-space:normal}
+.footer{display:block}.footer div{margin-top:8px}.footer a{margin:0 16px 0 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nav a{transition:none}}
+@media print{body{background:#fff}.site-header{position:static}.section{padding-top:32px}.hero{padding:30px 0}.feature,.project,.public-item,.role{break-inside:avoid}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap topbar">
-  <a class="identity" href="#home"><span class="symbol" aria-hidden="true">IS</span><span>Isaac Santín</span></a>
-  <span class="site-caption">Independent engineer / Madrid · 2026</span>
-  <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#systems">Products</a><a href="#code">Open code</a><a href="#background">Background</a><a class="nav-contact" href="mailto:isaac.santintorre@gmail.com">Contact ↗</a></nav>
-</div></header>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="#top">Isaac Santín<span>.</span></a><nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#projects">Projects</a><a href="#code">Code</a><a href="mailto:isaac.santintorre@gmail.com">Contact</a></nav></div></header>
 <main id="main">
-<section class="wrap hero" id="home" aria-labelledby="hero-title">
- <div><p class="overline">Data &amp; AI Engineer · Madrid, Spain</p>
- <h1 id="hero-title">Complex<br>problems.<br><em>Clear</em> systems.</h1>
- <p class="hero-text">I design and build the technology behind useful products: production data platforms, context-aware AI and complete software systems. From the first vague requirement to a working solution.</p>
- <div class="hero-cta"><a class="link-cta" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a class="link-secondary" href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="link-secondary" href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
- <p class="hero-note">4 years of professional experience overall · ~2 in data / AI · English C1 (IELTS 7.5)</p>
- </div>
- <aside class="diagram" aria-label="Abstract engineering process illustration"><div class="diagram-top"><span>FIG. 01 / THE PROCESS</span><span>IS—26</span></div><div class="diagram-glyph" aria-hidden="true">↗</div><div class="diagram-flow"><p>FROM PROBLEM TO PRODUCT</p><div class="diagram-step"><span>01</span> Understand the problem <b>→</b></div><div class="diagram-step"><span>02</span> Engineer the system <b>→</b></div><div class="diagram-step"><span>03</span> Ship something useful <b>↗</b></div></div></aside>
+<section id="top" class="hero container">
+ <div><p class="eyebrow">Data &amp; AI Engineer · Madrid, Spain</p><h1>I turn complex problems into <em>working systems.</em></h1>
+ <p class="hero-desc">I build production data platforms, AI-powered tools and complete software products—from an ambiguous business need to a reliable solution people can use.</p>
+ <div class="hero-links"><a href="#work">See selected work</a><a href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
+ <aside class="hero-aside" aria-label="Professional background"><div><p class="meta-label">Perspective</p><strong>Engineering + business</strong><p>I combine hands-on implementation with an Economics background and product ownership.</p></div><div><p class="meta-label">Experience</p><strong>4 years overall</strong><p>Approximately 2 years focused on data and AI.</p></div></aside>
 </section>
-<div class="wrap stat-strip" aria-label="Selected scale of verified work"><div class="stat-label">Built with<br>real-world stakes.</div><div class="stat"><strong>3 GW</strong><span>Renewable portfolio supported at FRV</span></div><div class="stat"><strong>30+</strong><span>Power BI pages with contextual AI</span></div><div class="stat"><strong>100+</strong><span>Business KPIs in automated reporting at Ifeel</span></div></div>
-<section id="work" class="section wrap" aria-labelledby="work-title">
- <div class="section-head"><span class="index">/ 01</span><h2 id="work-title">Impact, not<br><em>just output.</em></h2><p>Production engineering and applied AI in environments where reliability matters.</p></div>
- <div class="feature-case">
- <div class="case-left"><span class="case-id">01 — Featured work / FRV / Sep 2025 – Jul 2026 / Private code</span><h3>Making energy data usable at scale.</h3><p class="lede">As the team's sole Data Engineer, I owned the path from operational data to tools used by Operations, Asset Management and C-level stakeholders.</p><div class="case-stamp"><strong>3 GW</strong><span>Renewable assets supported by the team's data platform</span></div></div>
- <div class="case-right">
-  <div class="facts-row"><span class="label">The challenge</span><p>Complex operational sources and recurring manual reporting made it harder to access trustworthy answers quickly.</p></div>
-  <div class="facts-row"><span class="label">Data platform</span><p>Owned production pipelines and data products across two databases. Built ingestion, validation, monitoring and recovery flows using <strong>Python, SQL, PySpark and Azure Databricks</strong>.</p></div>
-  <div class="facts-row"><span class="label">Applied AI</span><p>Independently built <strong>Smart Insights</strong>, bringing natural-language analysis and context-aware executive summaries to 30+ Power BI pages. Source data and business logic remained outside the LLM.</p></div>
-  <div class="facts-row"><span class="label">Decision support</span><div><p>Created operational reporting, executive views and plant-level economic-impact models. Initiated reporting automation with <strong>1,000+ hours/year of projected manual savings</strong>.</p><p class="fact-note">Projected, not realised; the initiative was not completed.</p></div></div>
- </div></div>
- <div class="if-section"><h3>Ifeel <span aria-hidden="true">↗</span></h3><p>Automated weekly ETL and reporting from APIs, CSV and Snowflake across <strong>100+ business KPIs</strong>. Built dashboards, AI-assisted analysis and a 30-day churn-prediction model.</p><span class="aside">Data Scientist / BI · 2025</span></div>
+<div class="container metrics" aria-label="Verified scope of prior work"><div class="metric"><strong>3 GW</strong><p>Renewable portfolio supported at FRV</p></div><div class="metric"><strong>30+</strong><p>Power BI pages with contextual AI</p></div><div class="metric"><strong>100+</strong><p>Business KPIs in Ifeel reporting</p></div></div>
+<section id="work" class="section container" aria-labelledby="work-title">
+ <div class="section-top"><span class="section-index">01 / Work</span><div><h2 id="work-title">Engineering with business impact.</h2><p class="intro">Production systems and applied AI, built for real operational needs.</p></div></div>
+ <article class="feature"><div><p class="meta-label">FRV · Data Engineer · Private employer code</p><h3>Turning renewable-energy data into decisions.</h3><p class="date">September 2025 – July 2026</p><p class="summary">As the team's sole Data Engineer, I owned data products used by Operations, Asset Management and C-level stakeholders, supporting a portfolio of 3 GW of renewable assets.</p></div>
+ <div class="detail-group"><div class="detail"><b>Data engineering</b><p>Production pipelines across two databases, using Python, SQL, PySpark and Azure Databricks, with data-quality checks, backfills and monitoring.</p></div><div class="detail"><b>Applied AI</b><p>Independently built Smart Insights: natural-language analysis and contextual executive summaries across 30+ Power BI pages, grounded in data and business rules.</p></div><div class="detail"><b>Reporting and impact</b><p>Plant-level economic-impact models and executive reporting. Initiated automation targeting 1,000+ hours of manual reporting saved annually.</p><span class="note">The savings were projected, not achieved.</span></div></div></article>
+ <article class="inline-work"><div><h3>Ifeel · Data Scientist / BI</h3><small>February – August 2025</small></div><p>Automated weekly ETL and reporting across 100+ KPIs from APIs, CSV and Snowflake. Built dashboards, AI-assisted reporting and a 30-day churn prediction model.</p></article>
 </section>
-<section class="section wrap" id="systems" aria-labelledby="systems-title">
- <div class="section-head"><span class="index">/ 02</span><h2 id="systems-title">I build the<br><em>whole thing.</em></h2><p>Independent products that combine systems engineering, product decisions and applied AI.</p></div>
- <article class="system"><span class="system-no">S / 01</span><div><h3 class="system-title">Faro.<br><em>AI that fits my life.</em></h3><p class="system-sub">A personalised AI agent built around my own workflows, accessed through an intentionally minimal phone.</p><div class="system-body"><p><strong>The idea:</strong> separate computing intelligence from screen time. Use a simple physical keypad and voice interaction, with the agent running outside the phone.</p><p><strong>What I built:</strong> the KaiOS application, voice-first interaction, authenticated gateway and agent integration, adapted to the hardware's limits. I am also building the agent's memory and useful personal workflows—not just its interface.</p><p><strong>Actual state:</strong> voice questions and paginated answers have been tested on the physical Alcatel 3088X; broader tools and memory are still being developed and validated.</p></div><p class="system-meta">Private code · KaiOS / ES5 / AI agents · Active development</p></div><div class="system-art phone-art" role="img" aria-label="Concept illustration of a simple phone with a voice-based personal agent"><span class="art-label">INTERFACE / 01</span><div class="phone-shell"><div class="phone-screen">FARO<span style="display:block;font-size:9px;margin-top:13px">PERSONAL AGENT</span><span style="display:block;margin-top:8px">VOICE READY</span><div class="dots">•••</div></div><div class="phone-keys"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="phone-hint">VOICE → AGENT<br>AGENT → ACTION</div></div></article>
- <article class="system"><span class="system-no">S / 02</span><div><h3 class="system-title">Ataraxia Humana.<br><em>Zero to platform.</em></h3><p class="system-sub">Independently architecting and programming the entire technology foundation of a digital psychology platform.</p><div class="system-body"><p><strong>Scope of ownership:</strong> the public website, product experience, backend, data architecture, user roles, practitioner matching, booking, payments integration, infrastructure design, security and automated testing.</p><p><strong>AI direction:</strong> developing specialised assistants for research, documentation and operational workflows—including legal and administrative preparation—with human expert review rather than claiming that software replaces licensed professionals.</p><p><strong>Actual state:</strong> a functioning local MVP/pilot environment. The system has not been opened to real users or live-money transactions.</p></div><p class="system-meta">Private code · Full-stack engineering / Product / Applied AI · Local MVP</p></div><div class="system-art platform-art" role="img" aria-label="Abstract concept map for the platform's connected client, professional and operations modules"><span class="art-label">ARCHITECTURE / 02</span><div class="platform-node one">CLIENT EXPERIENCE<small>Onboarding / matching</small></div><div class="platform-node two">PRACTITIONER PORTAL<small>Schedule / workflows</small></div><div class="platform-node three">OPERATIONS LAYER<small>Data / security / AI support</small></div></div></article>
- <div class="subwork"><span class="index">S / 03</span><h3>Independent decision systems</h3><p>Developing private AI-assisted software that turns inconsistent information into structured inputs, reliable calculations and prioritised decisions, with review and approval gates for consequential actions.</p><span class="stage">Private code / Applied AI</span></div>
- <div class="subwork"><span class="index">S / 04</span><h3>Business reporting &amp; compliance</h3><p>Designed traceable data-reconciliation and operational reporting workflows to reduce manual interpretation of records and improve the reliability of recurring administrative calculations.</p><span class="stage">Private materials / Operational</span></div>
- <div class="subwork"><span class="index">S / 05</span><h3>jewelrei</h3><p>Founded and operated a personalised-jewellery e-commerce brand, managing sourcing, pricing, marketing and customer operations end to end. An early foundation for my approach to product economics.</p><span class="stage">Founder / 2020–2022</span></div>
+<section id="projects" class="section container" aria-labelledby="projects-title">
+ <div class="section-top"><span class="section-index">02 / Projects</span><div><h2 id="projects-title">Products I build end to end.</h2><p class="intro">Independent work where I own the architecture, implementation and product decisions.</p></div></div>
+ <div class="project-list"><article class="project"><div><span class="meta-label">Independent product · Private code</span><h3>Ataraxia Humana</h3><p class="summary">Building the technology behind a psychology platform from the ground up. I own the website, product experience, backend, data model and technical architecture—not just one feature.</p></div><div class="detail-group"><div class="detail"><b>End-to-end ownership</b><p>Engineering the client, practitioner and admin workflows, matching, scheduling, payment integration, security and infrastructure plans.</p></div><div class="detail"><b>Applied AI</b><p>Developing specialised assistants for research and operational preparation, including legal/compliance workflows with human review.</p></div><div class="detail"><b>Status</b><p>Working local MVP and pilot environment; no live users or real-money launch.</p></div></div></article>
+<article class="project"><div><span class="meta-label">Personal AI system · Private code</span><h3>Faro</h3><p class="summary">A personalised AI agent designed around my own needs, accessed through an intentionally simple feature phone. The phone is just the interface; the intelligence lives on my server.</p></div><div class="detail-group"><div class="detail"><b>System built</b><p>KaiOS app, voice interaction, authenticated gateway and a Mac-hosted AI agent, designed for a physical keypad and constrained hardware.</p></div><div class="detail"><b>Personalisation</b><p>Developing contextual memory and tools to support everyday workflows, with owner-controlled permissions.</p></div><div class="detail"><b>Status</b><p>Voice questions and answers tested on the physical device; advanced actions and memory still in development.</p></div></div></article></div>
+ <div class="compact-list"><article class="compact-row"><h3>Independent decision systems</h3><p>Private AI-assisted software for turning inconsistent information into structured analysis and reliable decisions, with human approval where it matters.</p></article>
+<article class="compact-row"><h3>Reporting &amp; compliance workflows</h3><p>Traceable reconciliations and repeatable administrative calculations using structured records and checks.</p></article>
+<article class="compact-row"><h3>jewelrei</h3><p>Founded and operated an online personalised-jewellery business, handling sourcing, pricing, marketing and customer operations (2020–2022).</p></article></div>
 </section>
-<section class="section wrap" id="code" aria-labelledby="code-title">
- <div class="section-head"><span class="index">/ 03</span><h2 id="code-title">Less talk.<br><em>More code.</em></h2><p>Six public repositories. The code behind private or employer work remains private.</p></div>
- <a class="code-row" href="https://github.com/isaacstg/pairbar-codex" target="_blank" rel="noopener noreferrer"><span class="n">01</span><h3>Pairbar</h3><p>A native macOS menu-bar application for managing additional ChatGPT/Codex profiles with local-first safeguards.</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="code-row" href="https://github.com/isaacstg/repo-preflight" target="_blank" rel="noopener noreferrer"><span class="n">02</span><h3>Repo Preflight</h3><p>A publishing-readiness CLI and GitHub Action checking secrets, risky workflows and repository hygiene.</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="code-row" href="https://github.com/isaacstg/decision-capsules" target="_blank" rel="noopener noreferrer"><span class="n">03</span><h3>Decision Capsules</h3><p>A small, auditable format for recording engineering decisions, evidence, risks and human review.</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="code-row" href="https://github.com/isaacstg/ChefAI" target="_blank" rel="noopener noreferrer"><span class="n">04</span><h3>ChefAI</h3><p>A conversational cooking assistant using retrieval-augmented generation and ingredient-aware suggestions.</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="code-row" href="https://github.com/isaacstg/california-housing-api" target="_blank" rel="noopener noreferrer"><span class="n">05</span><h3>California Housing API</h3><p>A regression model wrapped in a FastAPI prediction endpoint, from training to inference.</p><span class="arrow" aria-hidden="true">↗</span></a>
-<a class="code-row" href="https://github.com/isaacstg/Goodreads-Scraper" target="_blank" rel="noopener noreferrer"><span class="n">06</span><h3>Goodreads Scraper</h3><p>A Python dashboard exploring book trends, reviews and sentiment from collected public data.</p><span class="arrow" aria-hidden="true">↗</span></a>
+<section id="code" class="section container" aria-labelledby="code-title">
+ <div class="section-top"><span class="section-index">03 / Code</span><div><h2 id="code-title">Public work, open for review.</h2><p class="intro">Selected public repositories. Code for private and employer projects is not published.</p></div></div>
+ <div class="public-grid"><article class="public-item"><h3><a href="https://github.com/isaacstg/repo-preflight" target="_blank" rel="noopener noreferrer">Repo Preflight</a></h3><p>CLI and GitHub Action for checking potential secrets, unsafe workflow settings and repository hygiene.</p></article>
+<article class="public-item"><h3><a href="https://github.com/isaacstg/pairbar-codex" target="_blank" rel="noopener noreferrer">Pairbar</a></h3><p>Native macOS menu-bar application for locally managed ChatGPT/Codex profiles; in development.</p></article>
+<article class="public-item"><h3><a href="https://github.com/isaacstg/decision-capsules" target="_blank" rel="noopener noreferrer">Decision Capsules</a></h3><p>Portable, schema-validated records for engineering decisions, evidence and risk review.</p></article>
+<article class="public-item"><h3><a href="https://github.com/isaacstg/ChefAI" target="_blank" rel="noopener noreferrer">ChefAI</a></h3><p>Recipe assistant exploring RAG, ingredient-aware suggestions and conversational interaction.</p></article>
+<article class="public-item"><h3><a href="https://github.com/isaacstg/california-housing-api" target="_blank" rel="noopener noreferrer">California Housing API</a></h3><p>Regression modelling project delivered through a FastAPI prediction endpoint.</p></article>
+<article class="public-item"><h3><a href="https://github.com/isaacstg/Goodreads-Scraper" target="_blank" rel="noopener noreferrer">Goodreads Scraper</a></h3><p>Book trends and review sentiment explored through scraping and an interactive dashboard.</p></article></div>
 </section>
-<section class="section wrap" id="background" aria-labelledby="background-title">
- <div class="section-head"><span class="index">/ 04</span><h2 id="background-title">Where I come<br><em>from.</em></h2><p>Engineering backed by an understanding of commercial decisions and human workflows.</p></div>
- <div class="cv-grid"><div class="cv-row"><time>2026—now</time><h3>Independent · AI &amp; Operations</h3><p>Building internal software and AI-assisted processes for a private independent business. Scope includes structured analysis, reconciliation and decision support.</p></div>
-<div class="cv-row"><time>2025—2026</time><h3>FRV · Data Engineer</h3><p>End-to-end ownership of operational data engineering, reporting and contextual GenAI for Operations, Asset Management and C-level stakeholders.</p></div>
-<div class="cv-row"><time>2025</time><h3>Ifeel · Data Scientist / BI</h3><p>Automated ETL and recurring analytics, built dashboards and a 30-day churn prediction model.</p></div>
-<div class="cv-row"><time>2023</time><h3>El Corte Inglés · Purchasing intern</h3><p>Sales and product-performance analysis for buying and seasonal planning.</p></div>
-<div class="cv-row"><time>2020—2022</time><h3>jewelrei · Founder</h3><p>Founded and operated a personalised-jewellery e-commerce business.</p></div></div>
+<section id="experience" class="section container" aria-labelledby="experience-title">
+ <div class="section-top"><span class="section-index">04 / Background</span><div><h2 id="experience-title">Experience.</h2></div></div><div class="experience"><div class="role"><time>2026–present</time><strong>Independent · Engineering &amp; automation</strong><p>Building internal AI-assisted workflows for analysis, administrative processes and decision support.</p></div>
+<div class="role"><time>2025–2026</time><strong>FRV · Data Engineer</strong><p>Owned operational data products, pipelines and contextual AI analysis for Operations, Asset Management and C-level.</p></div>
+<div class="role"><time>2025</time><strong>Ifeel · Data Scientist / BI</strong><p>ETL automation, 100+ KPI reporting, dashboards and a 30-day churn prediction model.</p></div>
+<div class="role"><time>2023</time><strong>El Corte Inglés · Purchasing intern</strong><p>Sales analysis and seasonal buying support.</p></div>
+<div class="role"><time>2020–2022</time><strong>jewelrei · Founder</strong><p>End-to-end e-commerce operations, sourcing, pricing and marketing.</p></div></div>
 </section>
-<section class="section wrap" aria-labelledby="foundations-title">
- <div class="section-head"><span class="index">/ 05</span><h2 id="foundations-title">The foundations.</h2><p>Tools are a means, not the starting point.</p></div>
- <div class="bio-grid"><div><h3>Engineering toolkit</h3><div class="skill-row"><strong>Data</strong><span>Python · SQL · PySpark · Databricks · Delta Lake · Azure SQL · Snowflake · ETL/ELT</span></div><div class="skill-row"><strong>Analytics</strong><span>Power BI · DAX · KPI design · Data modelling · Predictive models</span></div><div class="skill-row"><strong>Applied AI</strong><span>AI agents · LLM workflows · OpenAI API · RAG · n8n · Workflow automation</span></div><div class="skill-row"><strong>Building</strong><span>JavaScript · FastAPI · Git/GitHub · Testing · Product engineering</span></div></div>
- <div><h3>Education and language</h3><div class="bio-item"><strong>MSc in Data Science &amp; AI</strong><span>AFI Global Education · 2024–2025 · Average grade 8/10</span></div><div class="bio-item"><strong>BSc in Economics</strong><span>Universidad Carlos III de Madrid · 2020–2024</span></div><div class="bio-item"><strong>Spanish — native · English — C1 (IELTS 7.5)</strong><span>Experienced working with international teams.</span></div></div></div>
+<section id="about" class="section container" aria-labelledby="about-title">
+ <div class="section-top"><span class="section-index">05 / About</span><div><h2 id="about-title">Skills &amp; education.</h2></div></div>
+ <div class="profile-grid"><div><h3>Technical toolkit</h3>
+  <div class="skill-line"><b>Data</b><p>Python, SQL, PySpark, Databricks, Delta Lake, Azure, Snowflake, ETL/ELT</p></div>
+  <div class="skill-line"><b>Analytics</b><p>Power BI, DAX, KPI design, data modelling, predictive models</p></div>
+  <div class="skill-line"><b>AI</b><p>LLM agents and workflows, OpenAI API, RAG, n8n</p></div>
+  <div class="skill-line"><b>Software</b><p>JavaScript, FastAPI, Git/GitHub, testing and product engineering</p></div></div>
+ <div><h3>Education &amp; languages</h3><div class="education"><strong>MSc in Data Science &amp; AI</strong><p>AFI Global Education · 2024–2025 · Average grade 8/10</p></div><div class="education"><strong>BSc in Economics</strong><p>Universidad Carlos III de Madrid · 2020–2024</p></div><div class="education"><strong>Languages</strong><p>Spanish: Native · English: C1 (IELTS 7.5)</p></div></div></div>
 </section>
-<section class="wrap closing" aria-labelledby="closing-title"><div><p>Have a challenging problem?</p><h2 id="closing-title">Let's make it<br><em>work.</em></h2><a href="mailto:isaac.santintorre@gmail.com?subject=Let%27s%20connect">isaac.santintorre@gmail.com ↗</a></div><small>ISAAC SANTÍN<br>DATA &amp; AI ENGINEER<br>MADRID, SPAIN</small></section>
-</main><footer class="wrap"><span>© 2026 Isaac Santín Torrecilla · Built as a single lightweight page</span><div><a href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></footer>
-</body></html>
+<section class="container contact" aria-labelledby="contact-title"><div><p class="section-index">Get in touch</p><h2 id="contact-title">Let's build something useful.</h2><p>Interested in data engineering, applied AI and product-focused engineering.</p></div><a href="mailto:isaac.santintorre@gmail.com">isaac.santintorre@gmail.com</a></section>
+</main>
+<footer class="container footer"><span>© 2026 Isaac Santín Torrecilla · Madrid, Spain</span><div><a href="https://github.com/isaacstg" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/isaacst" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
+</body>
+</html>

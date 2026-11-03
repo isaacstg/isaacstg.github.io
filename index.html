@@ -262,7 +262,7 @@ body{background:#fff}
 .project-heading{display:flex;justify-content:space-between;align-items:end;gap:25px}
 .project-heading>.section-index{display:none}
 .project-heading .section-index{margin-bottom:12px}
-.depth-toggle{background:transparent;border:1px solid #bdd0c2;border-radius:6px;padding:9px 12px;color:var(--accent);font:730 12px/1.3 inherit;white-space:nowrap;cursor:pointer;transition:background .15s}
+.depth-toggle{background:transparent;border:1px solid #bdd0c2;border-radius:6px;padding:9px 12px;color:var(--accent);font-family:inherit;font-weight:730;font-size:12px;line-height:1.3;white-space:nowrap;cursor:pointer;transition:background .15s}
 .depth-toggle:hover,.depth-toggle[aria-pressed="true"]{background:var(--accent-pale)}
 .depth-toggle span{font-weight:850;font-size:15px;margin-left:5px}
 .project:target{border-color:#91b09d;box-shadow:0 0 0 2px #e4eee7}
@@ -468,7 +468,11 @@ body{background:#fff}
     }
   };
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".index-tab"));
+  var tablist = document.querySelector(".index-tabs");
   var showcase = document.getElementById("system-panel");
+  function updateTabOrientation() { if (tablist) tablist.setAttribute("aria-orientation", window.innerWidth <= 760 ? "horizontal" : "vertical"); }
+  window.addEventListener("resize", updateTabOrientation);
+  updateTabOrientation();
   function displaySystem(tab, shouldFocus) {
     var data = systemData[tab.getAttribute("data-system")];
     if (!data || !showcase) return;

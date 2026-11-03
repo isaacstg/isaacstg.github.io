@@ -526,7 +526,7 @@ body{background:#fff}
   var progress = document.getElementById("scroll-progress-bar");
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]")).filter(function (section) {
-    return section.id !== "top";
+    return navLinks.some(function (link) {return link.getAttribute("href") === "#" + section.id;});
   });
   var scheduled = false;
   function updatePosition() {

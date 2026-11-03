@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaac Santín Torrecilla — Data &amp; AI Engineer</title>
+<style>
+  :root { --ink:#1a1d21; --muted:#5b6470; --accent:#0b5fff; --line:#e6e8eb; --bg:#ffffff; --card:#f7f8fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 64px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 2rem; margin: 0 0 6px; }
+  .role { font-size: 1.15rem; color: var(--accent); margin: 0 0 10px; font-weight: 600; }
+  .meta { color: var(--muted); margin: 0; }
+  .meta a { color: var(--accent); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  h2 { font-size: 1.25rem; margin: 36px 0 14px; }
+  p { margin: 0 0 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; }
+  .card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .card .sub { color: var(--muted); font-size: .92rem; margin-bottom: 8px; }
+  .tag { display:inline-block; font-size:.75rem; font-weight:600; border:1px solid var(--line); border-radius: 999px; padding: 2px 10px; margin: 2px 4px 2px 0; color: var(--muted); background:#fff; }
+  .priv { color:#8a6d00; }
+  ul { margin: 6px 0 10px 18px; padding: 0; }
+  li { margin-bottom: 5px; }
+  .skills span { display:inline-block; background:#eef3ff; color:#123a8f; border-radius:6px; padding:3px 9px; margin:2px 4px 2px 0; font-size:.9rem; }
+  footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Isaac Santín Torrecilla</h1>
+  <p class="role">Data &amp; AI Engineer — Data Engineering · AI Automation · Business Analytics</p>
+  <p class="meta">Madrid, Spain · <a href="https://github.com/isaacstg">github.com/isaacstg</a> · <a href="https://www.linkedin.com/in/isaacst">linkedin.com/in/isaacst</a></p>
+</header>
+
+<h2>About</h2>
+<p>Data &amp; AI Engineer with 4 years of professional experience. As the sole Data Engineer at a renewable-energy company (FRV), I owned the data platform end to end — from business requirements to production data products used by Operations, Asset Management and the C-level. I build with AI throughout my work: natural-language analytics, LLM-powered automation workflows, and my own tooling as a self-employed professional.</p>
+
+<h2>Selected work</h2>
+
+<div class="card">
+  <h3>Data platform &amp; AI products — FRV (renewable energy)</h3>
+  <p class="sub">Data Engineer · sole data engineer on the team · <span class="priv">Code: private (employer)</span></p>
+  <ul>
+    <li>End-to-end ownership of data pipelines and products (Databricks / Spark, Azure, Snowflake), serving 100+ business KPIs.</li>
+    <li><strong>Smart Insights:</strong> natural-language analysis layer over Power BI so business users can question their data directly.</li>
+    <li><strong>AI automation workflows</strong> with n8n and LLMs integrated into operational processes.</li>
+    <li>Led the automation of operational Excel reporting, a project targeting roughly 1,000 hours/month of manual work.</li>
+  </ul>
+  <span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Databricks</span><span class="tag">Azure</span><span class="tag">Snowflake</span><span class="tag">Power BI</span><span class="tag">n8n + LLMs</span>
+</div>
+
+<div class="card">
+  <h3>Faro — a dumbphone with an external AI brain</h3>
+  <p class="sub">Personal project · in active development · <span class="priv">Code: private repository</span></p>
+  <ul>
+    <li>A low-cost KaiOS feature phone (calls/SMS only) connected through push-to-talk to a personal AI agent running on a home server.</li>
+    <li>The agent handles email, calendar and messaging tasks by voice, with privacy as a design constraint from day one.</li>
+    <li>Designed and built the terminal app, the agent bridge and the privacy model myself.</li>
+  </ul>
+  <span class="tag">KaiOS</span><span class="tag">JavaScript</span><span class="tag">AI agents</span><span class="tag">Privacy by design</span>
+</div>
+
+<div class="card">
+  <h3>jewelrei — own e-commerce business</h3>
+  <p class="sub">Founder · Operations &amp; Marketing · 2020–2022</p>
+  <ul>
+    <li>Founded and ran a personalised-jewellery e-commerce end to end: sourcing, pricing, inventory, marketing and operations.</li>
+    <li>Today I also run a self-employed resale operation, using AI workflows to structure ambiguous listings and support pricing decisions while keeping human control.</li>
+  </ul>
+  <span class="tag">E-commerce operations</span><span class="tag">Pricing</span><span class="tag">AI-assisted workflows</span>
+</div>
+
+<h2>Open-source samples</h2>
+<div class="card">
+  <h3><a href="https://github.com/isaacstg/california-housing-api">california-housing-api</a></h3>
+  <p>Machine-learning model served through a FastAPI REST API: training pipeline, inference endpoint and project structure for a regression model on the California housing dataset.</p>
+  <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">scikit-learn</span>
+</div>
+<div class="card">
+  <h3><a href="https://github.com/isaacstg/ChefAI">ChefAI</a></h3>
+  <p>An AI cooking assistant experiment: recipe-oriented conversational helper built to explore LLM interaction patterns.</p>
+  <span class="tag">Python</span><span class="tag">LLMs</span>
+</div>
+
+<h2>Skills</h2>
+<p class="skills">
+  <span>Python</span><span>SQL</span><span>PySpark / Spark</span><span>Databricks</span><span>Azure</span><span>Snowflake</span><span>Power BI</span><span>Medallion architecture</span><span>n8n</span><span>LLM workflows &amp; agents</span><span>FastAPI</span><span>Git</span>
+</p>
+
+<h2>Education &amp; languages</h2>
+<ul>
+  <li><strong>MSc in Data Science &amp; Artificial Intelligence</strong> — AFI Global Education (2024–2025), average grade 8/10.</li>
+  <li><strong>BSc in Economics</strong> — Universidad Carlos III de Madrid (2020–2024).</li>
+  <li>Spanish: native · English: C1 (IELTS 7.5), working language with international teams.</li>
+</ul>
+
+<footer>© 2026 Isaac Santín Torrecilla · Madrid, Spain</footer>
+
+</div>
+</body>
+</html>
